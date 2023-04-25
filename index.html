@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>	TOOGLE</title>
+	<link rel="icon" type="image/x-icon" href="img/LOGO.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapsis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-family: "proxima-nova-soft", sans-serif;
+        --webkit-user-select: none;
+      }
+      body .vertical-centered-box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+      }
+      body .vertical-centered-box:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+      }
+      body .vertical-centered-box .content {
+        box-sizing: border-box;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 0;
+      }
+      * {
+        transition: all 0.3s;
+      }
+      body {
+        background: #222672;
+      }
+      .loader-circle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        margin-left: -60px;
+        margin-top: -60px;
+      }
+      .loader-line-mask {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 60px;
+        height: 120px;
+        margin-left: -60px;
+        margin-top: -60px;
+        transform-origin: 60px 60px;
+        --webkit-mask-image: -webkit-linear-gradient(top, #000000, rgba(0, 0, 0, 0));
+        animation: rotate 1.2s infinite linear;
+      }
+      .loader-line-mask .loader-line {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+      }
+      #particles-background,
+      #particles-foreground {
+        left: -51%;
+        top: -51%;
+        width: 202%;
+        height: 202%;
+        transform: scale3d(0.5, 0.5, 1);
+        position: fixed;
+      }
+      #particles-background {
+        background: #2c2d44;
+    background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes fade {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.25;
+        }
+      }
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      
+      /*
+        Css code writen here...
+      */
+      /*Body section...@*/
+    
+      
+      
+      /*-------------------teckwisalogo-------------------*/
+     
+      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+      :root, body {
+        color: #fff;
+        height: 100%;
+        background: #333641;
+     }
+     .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+      .logo {
+        background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        position: relative;
+        font-size: 10vw;
+        font-family: 'Monoton', cursive;
+        animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+		margin-bottom:10%;
+		margin-top:0%
+     }
+      @keyframes reveal {
+        80% {
+          letter-spacing: 8px;
+       }
+        100% {
+          background-size: 300% 300%;
+       }
+     }
+      @keyframes glow {
+        40% {
+          text-shadow: 0 0 8px #fff;
+       }
+     }
+      
+
+
+
+      /*--------------top card----------------*/
+      .time-line_main{
+      display: flex;
+      justify-content: center;
+      }
+      .timeline{
+        width:800px;
+        background-color:#072736;
+        color:#fff;
+        padding:30px 20px;
+        box-shadow:0px 0px 10px rgba(0,0,0,.5);
+      }
+      .timeline ul{
+        list-style-type:none;
+        border-left:2px solid #094a68;
+        padding:10px 5px;
+      }
+      .timeline ul li{
+        padding:20px 20px;
+        position:relative;
+        cursor:pointer;
+        transition:.5s;
+      }
+      .timeline ul li span{
+        display:inline-block;
+        background-color:#1685b8;
+        border-radius:25px;
+        padding:10px 30px;
+        font-size:15px;
+        text-align:center;
+      }
+      .timeline ul li .content h3{
+        color:#34ace0;
+        font-size:17px;
+        padding-top:5px;
+      }
+      .timeline ul li .content p{
+        padding:0px 0px 0px 0px;
+        font-size:15px;
+		text-align: left;
+      }
+      .timeline ul li:before{
+        position:absolute;
+        content:'';
+        width:10px;
+        height:10px;
+        background-color:#34ace0;
+        border-radius:50%;
+        left:-11px;
+        top:28px;
+        transition:.5s;
+      }
+      .timeline ul li:hover{
+        background-color:#071f2a;
+      }
+      .timeline ul li:hover:before{
+        background-color:#0F0;
+        box-shadow:0px 0px 10px 2px #0F0;
+      }
+      @media (max-width:300px){
+        .timeline{
+          width:100%;
+          padding:30px 5px 30px 10px;
+        }
+        .timeline ul li .content h3{
+          color:#34ace0;
+          font-size:15px;
+        }
+      
+      }
+      
+      /*-----------about-------------*/
+      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+      :root, body {
+        color: #fff;
+        height: 100%;
+
+        background: #333641;
+     }
+ 
+      .text-div {
+        font-size: 150%;
+        font-family: 'Courier New', monospace;
+          height: 50%;
+          position: relative;
+          width: 90%;
+        left: 5%;
+
+     }
+      @keyframes reveal {
+        80% {
+          letter-spacing: 8px;
+       }
+        100% {
+          background-size: 300% 300%;
+       }
+     }
+      @keyframes glow {
+        40% {
+          text-shadow: 0 0 8px #fff;
+       }
+     }
+      
+	  @media screen and (max-width:780px){
+	  .text-div {
+        
+          height: 1000px;
+          
+	  }
+	  }
+	  
+	  @media (max-width:300px){
+	  .text-div {
+        
+          height: 1000px;
+          
+	  }
+	  }
+      /* ---------------------------------- */
+      
+      /*---------------bottom card----------------------*/
+      
+      *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+body{
+	background: #eee;}
+.flexone
+{
+	flex: 1;
+	}
+
+.groups{
+	margin: 0 auto;
+	width: 80%;
+	padding: 10px;
+	height: auto;
+	}
+.groups li{
+	position: relative;
+	list-style: none;
+	background: none;
+	border-radius: 5px;
+    box-shadow: 0 3px 4px 0 #0001;
+	overflow: hidden;
+	margin-bottom: 30px;
+	transition: all 0.3s;
+	}
+/*.groups li:hover{
+	transform: scale(1.04);
+	box-shadow: 0 4px 14px 0 #0005;
+	}*/
+.groups .card{
+	overflow: hidden;
+	display: block;
+	background: #0f0b154f;
+	margin-top: 5%;
+  border-radius: 2%;
+	}
+.groups .image-session{
+	float: left;
+	overflow: hidden;
+	margin-right: 20px;
+	}
+.groups .image-session .image{
+	width: 400px;
+	height: 420px;
+	display: block;
+	background-size: cover;
+    background-position: center;
+    margin-left: 5%;
+margin-top: 5%;
+border-radius: 3%;
+	}
+.groups .meta-sission{
+	position: relative;
+	padding: 15px;
+	display: block;
+	height: 320px;
+	}
+.groups .meta-sission .head{
+display: flex;
+margin-bottom: 10px;
+}
+.groups .meta-sission .head .catogry{
+	list-style: none;
+	text-decoration: none;
+	font-size: 14px;
+    font-weight: 600;
+	color: #0075ff;
+	}
+.meta-sission .head .per span,
+.meta-sission .head .per input{
+	display: block;
+	font-size: 10px;
+	text-align: right;
+	}
+.meta-sission .head .per input{
+	--webkit-appearance: none;
+	height: 5px;
+	border-radius: 5px;
+	background: #0001;
+    margin-bottom: 4px;
+	overflow: hidden;
+}
+.meta-sission .head .per input::-webkit-slider-thumb{
+	--webkit-appearance: none;
+	width: 0;
+    box-shadow: -100px 0 0 100px #0075ff;
+	}
+.groups .body .title{
+	height: 60px;
+	overflow: hidden;
+	font-size: 28px;
+	text-align: center;
+	}
+.groups .body .desc{
+	height: 45px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	font-size: 18px;
+	margin-top:20px;
+	}
+.groups .footer .button{
+	position: absolute;
+	bottom: -100px;
+	right: 25px;
+	background-image: linear-gradient( to right, #6253e1, #852d91, #a3a1ff, #f24645 );
+	box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+  color: #fff;
+    line-height: 2.2;
+	padding: 0 20px;
+	border-radius: 10px;
+	text-decoration: none;
+    box-shadow: 0 1px 6px 0 #0004;
+	transition: all 0.3s;
+font-size: 16px;
+font-weight: 600;
+color: #fff;
+cursor: pointer;
+
+background-size: 300% 100%;
+border-radius: 10px;
+-o-transition: all 0.4s ease-in-out;
+-webkit-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+	}
+.groups .footer .button:hover{
+	box-shadow: 0 3px 8px 0 #0005;
+	background: #063a78;right: 15px;
+	}
+.groups .footer .views{
+	display: block;
+	font-size: 12px;
+	margin-top: 40px;
+	}
+	
+.red-color {
+        color:red;
+    }
+.blue-color {
+        color:#34ace0;
+    }
+
+.white-color {
+        color:#ffffff;
+    }
+@media screen and (max-width:780px){
+	.groups{    
+	width: 96%;
+	}
+    .groups li:hover{
+		transform: none;  
+		box-shadow: none;
+		}
+		.groups .footer .button{
+		bottom: 20px;
+	}
+}
+@media screen and (max-width:560px){
+	.groups .image-session{   
+	float: none;   
+	margin-right: 0;
+	}
+    .groups .image-session .image{
+		width: 100%;
+		}
+	.groups .footer .button{
+		bottom: 20px;
+	}
+}
+     p.desc{
+        font-family: 'Courier New', monospace;
+      }
+      
+      /*-----------nav------------*/
+      * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      .nav-container{
+        position: relative;
+      }
+      body{
+        background: #1E1F25;
+      }
+     .nav ul{
+        display: flex;
+        width: 100%;
+        position: fixed;
+        height: 80vh;
+
+        max-width: 1000px;
+        justify-content: center;
+        text-align: center;
+      }
+      .nav{
+        justify-content: center;
+        margin-bottom: 0vh;
+        margin-top: 4vh;
+        font-family: 'Courier New', monospace;
+        font-weight:bold
+      }
+      .nav li a {
+        padding: 1% 1% 1%;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        color: #ebebeb;
+        min-width: 80px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .nav li a:hover {
+        background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+        background-size: 100% 100%;
+        color: #27262c;
+        animation: spring 300ms ease-out;
+        text-shadow: 0 -1px 0 #ef816c;
+        font-weight: bold;
+      }
+      .nav li a:active {
+        transform: translateY(4px);
+      }
+      
+      @keyframes spring {
+        15% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(1.2, 1.1);
+        }
+        40% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(0.95, 0.95);
+        }
+        75% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(1.05, 1);
+        }
+        100% {
+          -webkit-transform-origin: center center;
+          -webkit-transform: scale(1, 1);
+        }
+      }
+      
+      .shameless-plug{
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        padding: 8px 20px;
+        color: #ccc;
+        text-decoration: none;
+
+      }
+      /*--------------questions-----------------*/
+      @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+
+.container_1 {
+  margin: 0 auto;
+  padding: 4rem;
+
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #03b5d2;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+  color: #03b5d2;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 15em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+/*------------logos--------------*/
+.sqr {
+  --size: 60px;
+  height: 90px;
+  width: 150px;
+  border-radius: calc(var(--size) * 0.15);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  
+  
+}
+.sqr::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) * 0.8);
+  height: 100%;
+  top: calc(var(--size) * 0.05);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(20px) opacity(70%);
+}
+body {
+  margin: 0;
+
+  text-align: center;
+
+  background-color: #f6f6f6;
+
+}
+h1 {
+
+  position: relative;
+  font-size: 4vw;
+  margin-top: 10%;
+  font-family: "Source Sans Pro", sans-serif;
+
+}
+code {
+  background-color: #343434;
+  color: orange;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.sqrs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.sqr {
+  margin: 10px;
+}
+
+/*------------ASSOCITION--------------*/
+.sqr1 {
+  --size: 60px;
+  height: 150px;
+  width: 150px;
+  border-radius: calc(var(--size) * 0.15);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  
+  
+}
+.sqr1::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) * 0.8);
+  height: 100%;
+  top: calc(var(--size) * 0.05);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(20px) opacity(70%);
+}
+body {
+  margin: 0;
+
+  text-align: center;
+
+  background-color: #f6f6f6;
+
+}
+h2 {
+
+  position: relative;
+  font-size: 4vw;
+  margin-top: 10%;
+  font-family: 'Courier New', monospace;
+
+}
+code1 {
+  background-color: #343434;
+  color: orange;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.sqrs1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.sqr1 {
+  margin: 10px;
+}
+
+/*------------TOOGLE LOGO--------------*/
+.sqr2 {
+  --size: 60px;
+  height: 50%;
+  width: 50%;
+  border-radius: calc(var(--size) * 0.15);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 0%
+  
+  
+}
+.sqr2::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) * 0.8);
+  height: 100%;
+  top: calc(var(--size) * 0.05);
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: var(--img);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: blur(20px) opacity(70%);
+}
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+
+  text-align: center;
+
+  background-color: #f6f6f6;
+
+}
+h2 {
+
+  position: relative;
+  font-size: 4vw;
+  margin-top: 3%;
+  font-family: "Source Sans Pro", sans-serif;
+
+}
+code2 {
+  background-color: #343434;
+  color: orange;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.sqrs2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.sqr2 {
+  margin-bottom: 0%;
+}
+/*----------------footer--------------------*/
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	position: fixed;
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #032934;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+  position: relative;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+.footer-distributed .footer-right img{
+	width: 30%;
+}
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+/*----MAP----*/
+	.mapouter{
+	
+		position:relative;
+		text-align:right;
+		width:100%;
+		height:50%;
+		item-align: center;
+		}
+		
+		
+	.gmap_canvas {
+	
+		overflow:hidden;
+		background:none!important;
+		width:100%;
+		height:50%;
+		}
+		
+		
+	.gmap_iframe {
+
+		height:50%!important;
+		}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <main-container>
+     
+      
+      
+    <div id="particles-background" class="vertical-centered-box"></div>
+    <div id="particles-foreground" class="vertical-centered-box"></div>
+
+      <div class="nav-container">
+      <ul class="nav">
+        <li class="nav"><a href="">HOME</a></li>
+        <li class="nav"><a href="#about">ABOUT</a></li>
+        <li class="nav"><a href="#register">REGISTER</a></li>
+        <li class="nav"><a href="#contact">CONTACT</a></li>
+      </ul></div>
+	  
+	  <div class="sqrs2">
+  <div class="sqr2"><img src="img/LOGO.png" class="sqr2"></div>
+</div>
+      <div class="logo-container">
+      <div class="logo">
+        TOOGLE
+    </div></div>
+  <div class="text-div" id="about">
+    Toogle is a workshop conducted in association with tekwiza techfest and the department of computer science and engineering of sahrdaya.we understand that the students need a 
+	guidance to boost their skills and talents and to learn something new.The whole study related to Artificial intelligence with tensor flow is  concerned about the beneficiary 
+	and safety features of the system associated With our workshop program one can easily get a kick-start in this particular field of technology 
+
+ </div>
+ <h1> SCHEDULE</h1>
+ <div class="time-line_main">
+ <div class="timeline">
+  <ul>
+    <li>
+      <span>EVENTS</span>
+      <div class="content"> 
+        <h3>WORKSHOPS</h3>
+        <p class="fa-arrows blue-color" style="font-size:18px">&nbspADVANCED PYTHON AND AUTOMATION</p>
+	      <p class="desc"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp02 DEC 2022</p>
+		<p class="fa-arrows blue-color" style="font-size:18px">&nbspARTIFICAL INTELLIGENCE</p>
+		<p class="desc"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp02 AND 03 DEC 2022</p>
+		<p class="desc"><i class="fa fa-map-marker red-color" style="font-size:20px"></i>&nbspSahrdaya College of Engineering & Technology </p>
+      </div>
+    </li>
+    <li>
+      <span>REGISTER</span>
+      <div class="content">
+        <h3></h3>
+        <p class="fa-arrows blue-color" style="font-size:18px" >&nbspADVANCED PYTHON AND AUTOMATION</p>
+		<p class="desc"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbspSTART: 15 NOV 2022&nbsp&nbspEND: 30 NOV 2022</p>
+		<p class="desc"><i class="fa-rupee red-color" style="font-size:20px"></i>&nbspREGISTER FEE:&nbsp&nbsp&nbsp&nbsp350</p>
+		<p class="fa-arrows blue-color" style="font-size:18px">&nbspARTIFICAL INTELLIGENCE</p>
+		<p class="desc"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbspSTART: 15 NOV 2022&nbsp&nbspEND: 30 NOV 2022</p>
+		<p class="desc"><i class="fa-rupee red-color" style="font-size:20px"></i>&nbspREGISTER FEE:&nbsp&nbsp&nbsp&nbsp999</p>
+		
+      </div>
+    </li>
+    <li>
+      <span>ORGANIZERS</span>
+      <div class="content">
+        <h3></h3>
+        <p class="fa-arrows blue-color" style="font-size:18px" >&nbspADVANCED PYTHON AND AUTOMATION &nbsp&nbsp-TCS</p>
+		<p class="fa-arrows blue-color" style="font-size:18px" >&nbspARTIFICAL INTELLIGENCE &nbsp&nbsp-TENSORFLOW</p>
+      </div>
+    </li>
+   <!-- <li>
+      <span>DAY 2</span>
+      <div class="content">
+        <h3>PROGRAM SCHEDULE</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+        </p>
+      </div>
+    </li>-->
+  </ul>
+</div></div>
+
+  
+
+  <!-- row -->
+  <h1 id="register">WORKSHOPS</h1>
+  
+  <div class="article-contener">
+    <ul class="groups">
+        <li>
+            <div class="card">
+                <div class="image-session">
+                    <span class="image" style="background-image: url('img/AI.png');"></span>
+                </div>
+                <div class="meta-sission">                   
+                    <div class="body">
+                        <h2 class="title">ARTIFICAL INTELLIGENCE</h2>
+                        
+							<p class="desc" style="text-align:left;"><i class="fa fa-map-marker red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspSahrdaya College of Engineering & Technology </p>							
+							<p class="desc" style="text-align:left;"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp02 AND 03 DEC 2022</p>
+							<p class="desc" style="text-align:left;"><i class="fa-arrows red-color"style="font-size:20px"></i>&nbsp&nbsp&nbsp2 DAY WORKSHOP</p>
+            <p class="desc"></p>
+                    </div>
+                   <div class="footer">                        
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfoWZ7X4qkjbgyPAIRF04-GxGke3-9niZ1Dgujj4eOILh8HMA/viewform" class="button" style="font-family: 'Courier New', monospace;">REGISTER →</a>
+                    </div>
+                    </div>
+                </div>   
+      <div class="card">
+                <div class="image-session">
+                    <span class="image" style="background-image: url('img/PY.png');"></span>
+                </div>
+                <div class="meta-sission">                   
+                    <div class="body">
+                        <h2 class="title">ADVANCED PYTHON AND AUTOMATION</h2>
+                        
+                        <p class="desc" style="text-align:left;"><i class="fa fa-map-marker red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp&nbspSahrdaya College of Engineering & Technology </p>							
+						<p class="desc" style="text-align:left;"><i class="fa fa-calendar-o red-color" style="font-size:20px"></i>&nbsp&nbsp&nbsp02 DEC 2022</p>
+						<p class="desc" style="text-align:left;"><i class="fa-arrows red-color"style="font-size:20px"></i>&nbsp&nbsp&nbsp1 DAY WORKSHOP</p>
+            <p class="desc"></p>
+                    </div>
+                   <div class="footer">                        
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYyvQ0q8706h6GunG6YvTJIZdyQl_LAfYc54lIW7kiHtT1xQ/closedform" class="button">REGISTER →</a>
+                    </div>
+                    </div>
+                </div>  
+        </li>
+    </ul>
+</div>
+<div class="container_1">
+  <h2 class="title">FREQUENTLY ASKED QUESTIONS</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Who all eligible for workshop?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Bachelors, Masters and related courses with in computer science and allied branches.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">When is the reporting time starts? </span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>08:00 am.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Is we required to bring our laptop for workshop?<span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>YES, Everyone should bring their own systems (Laptops) for the two day workshop on Dec 2,3.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Amount required for registration?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>ADVANCED PYTHON AND AUTOMATION:&nbsp&nbsp&nbsp&nbsp350</p>
+		<p>ARTIFICAL INTELLIGENCE:&nbsp&nbsp&nbsp&nbsp999</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">Food and accommodation details?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>The food will be provided by the college it's self.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>
+	
+	<h2> IN ASSOCITION WITH</h2>
+
+<div class="sqrs1">
+  <div class="sqr1"><img src="https://tekothon.in/static/media/aces.7d06f890ebc557f35a4f.PNG" class="sqr1"></div>
+  <div class="sqr1"><img src="img/TW.png" class="sqr1"alt="tcs"></div>
+</div>
+<h1> ORGANIZERS</h1>
+
+<div class="sqrs">
+  <div class="sqr"><img src="img/ten1.png" class="sqr"></div>
+  <div class="sqr"><img src="img/TATA.png" class="sqr"alt="tcs"></div>
+</div>
+
+
+<footer class="footer-distributed" id="contact">
+
+  <div class="footer-left">
+      <img src="img/LOGO.png">
+    <h3 >TOOGLE</h3>
+
+    <p class="footer-links">
+      <a href="#HOME">HOME</a>
+      |
+      <a href="#">BLOG</a>
+      |
+      <a href="#about">ABOUT</a>
+      |
+      <a href="#contact">CONTACT</a>
+      |
+      <a href="#register">REGISTER</a>
+    </p>
+
+    <p class="footer-company-name"></p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span>Sahrdaya College of Engineering and Technology</span>
+       PB NO 17, Kodakara, Kerala 680684</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+91 7356385582, +91 9567588286</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="/cdn-cgi/l/email-protection#13606663637c6167537677667c7d7a6b3d707c7e"><span class="__cf_email__" data-cfemail="cdbeb8bdbda2bfb98da8a9b8a2a3a4b5e3aea2a0">toogleaces22@gmail.com</span></a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>FOLLOW US</span>
+       </p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/profile.php?id=100087384447381"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/toogle_aces/?hl=en"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/watch?v=K6J13RgK2ms"><i class="fa fa-youtube"></i></a>
+    </div>
+	<p class="footer-company-about">
+      <span>LOCATION</span>
+       </p>
+	<!--<img src="img/logo.png">-->
+	<div class="mapouter">
+<div class="gmap_canvas">
+<iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=sahrdaya college of engineering&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+
+</div>
+</div>
+</footer>
+<!-- end of row -->
+    </main-container>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+    <script>
+      /*!
+ * Particleground
+ *
+ * @author Jonathan Nicol - @mrjnicol
+ * @version 1.1.0
+ * @description Creates a canvas based particle system background
+ *
+ * Inspired by http://requestlab.fr/ and http://disruptivebydesign.com/
+ */
+!function(a,b){"use strict";function c(a){a=a||{};for(var b=1;b<arguments.length;b++){var c=arguments[b];if(c)for(var d in c)c.hasOwnProperty(d)&&("object"==typeof c[d]?deepExtend(a[d],c[d]):a[d]=c[d])}return a}function d(d,g){function h(){if(y){r=b.createElement("canvas"),r.className="pg-canvas",r.style.display="block",d.insertBefore(r,d.firstChild),s=r.getContext("2d"),i();for(var c=Math.round(r.width*r.height/g.density),e=0;c>e;e++){var f=new n;f.setStackPos(e),z.push(f)}a.addEventListener("resize",function(){k()},!1),b.addEventListener("mousemove",function(a){A=a.pageX,B=a.pageY},!1),D&&!C&&a.addEventListener("deviceorientation",function(){F=Math.min(Math.max(-event.beta,-30),30),E=Math.min(Math.max(-event.gamma,-30),30)},!0),j(),q("onInit")}}function i(){r.width=d.offsetWidth,r.height=d.offsetHeight,s.fillStyle=g.dotColor,s.strokeStyle=g.lineColor,s.lineWidth=g.lineWidth}function j(){if(y){u=a.innerWidth,v=a.innerHeight,s.clearRect(0,0,r.width,r.height);for(var b=0;b<z.length;b++)z[b].updatePosition();for(var b=0;b<z.length;b++)z[b].draw();G||(t=requestAnimationFrame(j))}}function k(){i();for(var a=d.offsetWidth,b=d.offsetHeight,c=z.length-1;c>=0;c--)(z[c].position.x>a||z[c].position.y>b)&&z.splice(c,1);var e=Math.round(r.width*r.height/g.density);if(e>z.length)for(;e>z.length;){var f=new n;z.push(f)}else e<z.length&&z.splice(e);for(c=z.length-1;c>=0;c--)z[c].setStackPos(c)}function l(){G=!0}function m(){G=!1,j()}function n(){switch(this.stackPos,this.active=!0,this.layer=Math.ceil(3*Math.random()),this.parallaxOffsetX=0,this.parallaxOffsetY=0,this.position={x:Math.ceil(Math.random()*r.width),y:Math.ceil(Math.random()*r.height)},this.speed={},g.directionX){case"left":this.speed.x=+(-g.maxSpeedX+Math.random()*g.maxSpeedX-g.minSpeedX).toFixed(2);break;case"right":this.speed.x=+(Math.random()*g.maxSpeedX+g.minSpeedX).toFixed(2);break;default:this.speed.x=+(-g.maxSpeedX/2+Math.random()*g.maxSpeedX).toFixed(2),this.speed.x+=this.speed.x>0?g.minSpeedX:-g.minSpeedX}switch(g.directionY){case"up":this.speed.y=+(-g.maxSpeedY+Math.random()*g.maxSpeedY-g.minSpeedY).toFixed(2);break;case"down":this.speed.y=+(Math.random()*g.maxSpeedY+g.minSpeedY).toFixed(2);break;default:this.speed.y=+(-g.maxSpeedY/2+Math.random()*g.maxSpeedY).toFixed(2),this.speed.x+=this.speed.y>0?g.minSpeedY:-g.minSpeedY}}function o(a,b){return b?void(g[a]=b):g[a]}function p(){console.log("destroy"),r.parentNode.removeChild(r),q("onDestroy"),f&&f(d).removeData("plugin_"+e)}function q(a){void 0!==g[a]&&g[a].call(d)}var r,s,t,u,v,w,x,y=!!b.createElement("canvas").getContext,z=[],A=0,B=0,C=!navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i),D=!!a.DeviceOrientationEvent,E=0,F=0,G=!1;return g=c({},a[e].defaults,g),n.prototype.draw=function(){s.beginPath(),s.arc(this.position.x+this.parallaxOffsetX,this.position.y+this.parallaxOffsetY,g.particleRadius/2,0,2*Math.PI,!0),s.closePath(),s.fill(),s.beginPath();for(var a=z.length-1;a>this.stackPos;a--){var b=z[a],c=this.position.x-b.position.x,d=this.position.y-b.position.y,e=Math.sqrt(c*c+d*d).toFixed(2);e<g.proximity&&(s.moveTo(this.position.x+this.parallaxOffsetX,this.position.y+this.parallaxOffsetY),g.curvedLines?s.quadraticCurveTo(Math.max(b.position.x,b.position.x),Math.min(b.position.y,b.position.y),b.position.x+b.parallaxOffsetX,b.position.y+b.parallaxOffsetY):s.lineTo(b.position.x+b.parallaxOffsetX,b.position.y+b.parallaxOffsetY))}s.stroke(),s.closePath()},n.prototype.updatePosition=function(){if(g.parallax){if(D&&!C){var a=(u-0)/60;w=(E- -30)*a+0;var b=(v-0)/60;x=(F- -30)*b+0}else w=A,x=B;this.parallaxTargX=(w-u/2)/(g.parallaxMultiplier*this.layer),this.parallaxOffsetX+=(this.parallaxTargX-this.parallaxOffsetX)/10,this.parallaxTargY=(x-v/2)/(g.parallaxMultiplier*this.layer),this.parallaxOffsetY+=(this.parallaxTargY-this.parallaxOffsetY)/10}var c=d.offsetWidth,e=d.offsetHeight;switch(g.directionX){case"left":this.position.x+this.speed.x+this.parallaxOffsetX<0&&(this.position.x=c-this.parallaxOffsetX);break;case"right":this.position.x+this.speed.x+this.parallaxOffsetX>c&&(this.position.x=0-this.parallaxOffsetX);break;default:(this.position.x+this.speed.x+this.parallaxOffsetX>c||this.position.x+this.speed.x+this.parallaxOffsetX<0)&&(this.speed.x=-this.speed.x)}switch(g.directionY){case"up":this.position.y+this.speed.y+this.parallaxOffsetY<0&&(this.position.y=e-this.parallaxOffsetY);break;case"down":this.position.y+this.speed.y+this.parallaxOffsetY>e&&(this.position.y=0-this.parallaxOffsetY);break;default:(this.position.y+this.speed.y+this.parallaxOffsetY>e||this.position.y+this.speed.y+this.parallaxOffsetY<0)&&(this.speed.y=-this.speed.y)}this.position.x+=this.speed.x,this.position.y+=this.speed.y},n.prototype.setStackPos=function(a){this.stackPos=a},h(),{option:o,destroy:p,start:m,pause:l}}var e="particleground",f=a.jQuery;a[e]=function(a,b){return new d(a,b)},a[e].defaults={minSpeedX:.1,maxSpeedX:.7,minSpeedY:.1,maxSpeedY:.7,directionX:"center",directionY:"center",density:1e4,dotColor:"#666666",lineColor:"#666666",particleRadius:7,lineWidth:1,curvedLines:!1,proximity:100,parallax:!0,parallaxMultiplier:5,onInit:function(){},onDestroy:function(){}},f&&(f.fn[e]=function(a){if("string"==typeof arguments[0]){var b,c=arguments[0],g=Array.prototype.slice.call(arguments,1);return this.each(function(){f.data(this,"plugin_"+e)&&"function"==typeof f.data(this,"plugin_"+e)[c]&&(b=f.data(this,"plugin_"+e)[c].apply(this,g))}),void 0!==b?b:this}return"object"!=typeof a&&a?void 0:this.each(function(){f.data(this,"plugin_"+e)||f.data(this,"plugin_"+e,new d(this,a))})})}(window,document),/**
+* requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+* @see: http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+* @see: http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+* @license: MIT license
+*/
+function(){for(var a=0,b=["ms","moz","webkit","o"],c=0;c<b.length&&!window.requestAnimationFrame;++c)window.requestAnimationFrame=window[b[c]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[b[c]+"CancelAnimationFrame"]||window[b[c]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(b){var c=(new Date).getTime(),d=Math.max(0,16-(c-a)),e=window.setTimeout(function(){b(c+d)},d);return a=c+d,e}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(a){clearTimeout(a)})}();
+
+
+particleground(document.getElementById('particles-foreground'), {
+ dotColor: 'rgba(255, 255, 255, 1)',
+ lineColor: 'rgba(255, 255, 255, 0.05)',
+ minSpeedX: 0.3,
+ maxSpeedX: 0.6,
+ minSpeedY: 0.3,
+ maxSpeedY: 0.6,
+ density: 50000, // One particle every n pixels
+ curvedLines: false,
+ proximity: 250, // How close two dots need to be before they join
+ parallaxMultiplier: 10, // Lower the number is more extreme parallax
+ particleRadius: 4, // Dot size
+});
+
+particleground(document.getElementById('particles-background'), {
+ dotColor: 'rgba(255, 255, 255, 0.5)',
+ lineColor: 'rgba(255, 255, 255, 0.05)',
+ minSpeedX: 0.075,
+ maxSpeedX: 0.15,
+ minSpeedY: 0.075,
+ maxSpeedY: 0.15,
+ density: 30000, // One particle every n pixels
+ curvedLines: false,
+ proximity: 20, // How close two dots need to be before they join
+ parallaxMultiplier: 20, // Lower the number is more extreme parallax
+ particleRadius: 2, // Dot size
+});
+
+    </script>
+</html>
